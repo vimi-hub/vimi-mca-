@@ -1,0 +1,275 @@
+
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo$ cd Desktop
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop$ mkdir gitrepo
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop$ cd gitrepo
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git init
+Initialized empty Git repository in /mnt/c/users/Lenovo/Desktop/gitrepo/.git/
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ ls
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ vi first.txt
+
+[1]+  Stopped                 vi first.txt
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git add .
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git commit -m "first file is added"
+[master (root-commit) eb5d35e] first file is added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 .first.txt.swp
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ ls
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git status
+On branch master
+nothing to commit, working tree clean
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ ls
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ cd ..
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop$ ls
+'GitHub Desktop.lnk'  'Microsoft Edge.lnk'   PotPlayer.lnk   desktop.ini   git   gitrepo
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop$ cd gitrepo
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ ls
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ vi first.txt
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ vi file1.txt
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git add .
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git commit
+[master eb2b37d] first file added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file1.txt
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ ls
+file1.txt
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git status
+On branch master
+nothing to commit, working tree clean
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git remote
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git remote add remote1 http://github.com/user/repo.git
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git add .
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git commit
+On branch master
+nothing to commit, working tree clean
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git remote
+remote1
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git remote -v
+remote1 http://github.com/user/repo.git (fetch)
+remote1 http://github.com/user/repo.git (push)
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git remote add remote2 https://github.com/octocat/Spoon-Knife
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git add .
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git status
+On branch master
+nothing to commit, working tree clean
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git remote
+remote1
+remote2
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git remote -v
+remote1 http://github.com/user/repo.git (fetch)
+remote1 http://github.com/user/repo.git (push)
+remote2 https://github.com/octocat/Spoon-Knife (fetch)
+remote2 https://github.com/octocat/Spoon-Knife (push)
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git remote add remote3 github.com/user/repo.git
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git remote -v
+remote1 http://github.com/user/repo.git (fetch)
+remote1 http://github.com/user/repo.git (push)
+remote2 https://github.com/octocat/Spoon-Knife (fetch)
+remote2 https://github.com/octocat/Spoon-Knife (push)
+remote3 github.com/user/repo.git (fetch)
+remote3 github.com/user/repo.git (push)
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git remote rm remote3
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git remote -v
+remote1 http://github.com/user/repo.git (fetch)
+remote1 http://github.com/user/repo.git (push)
+remote2 https://github.com/octocat/Spoon-Knife (fetch)
+remote2 https://github.com/octocat/Spoon-Knife (push)
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git remote rename remote2 octocat
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git remote -v
+octocat https://github.com/octocat/Spoon-Knife (fetch)
+octocat https://github.com/octocat/Spoon-Knife (push)
+remote1 http://github.com/user/repo.git (fetch)
+remote1 http://github.com/user/repo.git (push)
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git remote shoe upstream
+error: Unknown subcommand: shoe
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git remote show upstream
+fatal: 'upstream' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git remote show
+octocat
+remote1
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git branch
+* master
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git push remote1 branch
+error: src refspec branch does not match any.
+error: failed to push some refs to 'http://github.com/user/repo.git'
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git checkout -b branch1
+Switched to a new branch 'branch1'
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ vi file2.txt
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git add .
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git commit
+[branch1 3f7f0b7] second file added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file2.txt
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git remote add remote3 https://github.com/sruthy1999/MCA.git
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git remote
+octocat
+remote1
+remote3
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git branch
+* branch1
+  master
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git push remote3 branch1
+Username for 'https://github.com': sruthy1999
+Password for 'https://sruthy1999@github.com':
+Counting objects: 9, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 836 bytes | 52.00 KiB/s, done.
+Total 9 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+remote:
+remote: Create a pull request for 'branch1' on GitHub by visiting:
+remote:      https://github.com/sruthy1999/MCA/pull/new/branch1
+remote:
+To https://github.com/sruthy1999/MCA.git
+ * [new branch]      branch1 -> branch1
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git pull remote3
+remote: Enumerating objects: 36, done.
+remote: Counting objects: 100% (36/36), done.
+remote: Compressing objects: 100% (20/20), done.
+remote: Total 36 (delta 9), reused 30 (delta 3), pack-reused 0
+Unpacking objects: 100% (36/36), done.
+From https://github.com/sruthy1999/MCA
+ * [new branch]      master     -> remote3/master
+You asked to pull from the remote 'remote3', but did not specify
+a branch. Because this is not the default configured remote
+for your current branch, you must specify a branch on the command line.
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git pull --no-commit remote3
+You asked to pull from the remote 'remote3', but did not specify
+a branch. Because this is not the default configured remote
+for your current branch, you must specify a branch on the command line.
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git pull remote3/branch1
+fatal: 'remote3/branch1' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git pull branch1
+fatal: 'branch1' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git pull remote3/master
+fatal: 'remote3/master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git checkout -b branch2
+Switched to a new branch 'branch2'
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git branch
+  branch1
+* branch2
+  master
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git pull remote3/branch2
+fatal: 'remote3/branch2' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git pull remote3
+You asked to pull from the remote 'remote3', but did not specify
+a branch. Because this is not the default configured remote
+for your current branch, you must specify a branch on the command line.
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git fetch remote3 HEAD
+From https://github.com/sruthy1999/MCA
+ * branch            HEAD       -> FETCH_HEAD
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ GIT MERGE head
+GIT: command not found
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git merge HEAD
+Already up to date.
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git status
+On branch branch2
+nothing to commit, working tree clean
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git checkout branch1
+Switched to branch 'branch1'
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git fetch remote3
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git commit
+On branch branch1
+nothing to commit, working tree clean
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git remote
+octocat
+remote1
+remote3
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git fetch remote1 octocat :remotes/remote1/octocat
+Username for 'https://github.com': sruthy1999
+Password for 'https://sruthy1999@github.com':
+remote: Repository not found.
+fatal: repository 'https://github.com/user/repo.git/' not found
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git fetch origin master:remotes/origin/master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git fetch remote1 master:remotes/remote1/master
+Username for 'https://github.com': sruthy1999
+Password for 'https://sruthy1999@github.com':
+remote: Repository not found.
+fatal: repository 'https://github.com/user/repo.git/' not found
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git fetch remote3 master:remotes/remote3/master
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git fetch --multiple remote1 octocat
+Fetching remote1
+Username for 'https://github.com': sruthy1999
+Password for 'https://sruthy1999@github.com':
+remote: Repository not found.
+fatal: repository 'https://github.com/user/repo.git/' not found
+error: Could not fetch remote1
+Fetching octocat
+warning: no common commits
+remote: Enumerating objects: 16, done.
+remote: Total 16 (delta 0), reused 0 (delta 0), pack-reused 16
+Unpacking objects: 100% (16/16), done.
+From https://github.com/octocat/Spoon-Knife
+ * [new branch]      change-the-title -> octocat/change-the-title
+ * [new branch]      master           -> octocat/master
+ * [new branch]      test-branch      -> octocat/test-branch
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git fetch --multiple remote2 octocat
+fatal: No such remote or remote group: remote2
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git remote
+octocat
+remote1
+remote3
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git fetch --multiple remote3 octocat
+Fetching remote3
+Fetching octocat
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git checkout -b local
+Switched to a new branch 'local'
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git push origin local
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$ git push remote3 local
+Username for 'https://github.com': sruthy1999
+Password for 'https://sruthy1999@github.com':
+Total 0 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'local' on GitHub by visiting:
+remote:      https://github.com/sruthy1999/MCA/pull/new/local
+remote:
+To https://github.com/sruthy1999/MCA.git
+ * [new branch]      local -> local
+vimi@LAPTOP-1SPRSKKD:/mnt/c/users/Lenovo/Desktop/gitrepo$
